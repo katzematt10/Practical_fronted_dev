@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Login">
+        <!--This container will contain all the screen-->
+        <div class="form-container">
+            <!--This container will contain all the login form-->
+            <img src="" alt="logo" class="logo">
+            <h1 class="title">Create a new password</h1>
+            <p class="subtitle">Enter a new password for your account</p>
+            <form action="/" class="form">
+                <!--by the moment no action will be applied-->
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
+                <!--Id must be the same as the label "for"-->
+                <!--Placeholder is the default text we have in a empty "input"-->
+
+                <label for="new-password" class="label">Re-enter password</label>
+                <input type="password" id="new-password" placeholder="*********" class="input input-password">
+                <!--Id must be the same as the label "for"-->
+                <!--Placeholder is the default text we have in a empty "input"-->
+
+                <!--In a form we can put a <button> or an submit-type <input>-->
+                <input type="submit" value="Confirm" class="primary-button login-button">
+            </form> 
+
+        </div>
+    </div>
+</body>
+</html>
