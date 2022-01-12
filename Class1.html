@@ -4,14 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Document</title>
+    <style>
+        :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%; /*Our container must size all the screen*/
+            height: 100vh;
+            /*Now we'll center all our items and to do it easily
+            We'll use Grid and a property called place-items*/
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; 
+            /*We defined 3 rows, the second one is defined as 1fr of the space
+            and the other two is the remaining space*/
+            width: 300px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none; /*This property is none, bc we're designing
+            the desktop layout and we'll display our logo in mobile with
+            the responsive design.*/
+        }
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input {
+            /*To replicate our proposed design we need
+            to copy the color, the size and the form*/
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .primary-button {
+            background-color: var(--hospital-geen); /*Defines the button's color*/
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /*Change the cursor when we're above*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px; /*This avoid to show our button so small*/
+        }
+        .login-button {
+            margin-top: 14ppx;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="Login">
+    <div class="login">
         <!--This container will contain all the screen-->
         <div class="form-container">
             <!--This container will contain all the login form-->
-            <img src="" alt="logo" class="logo">
+            <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
             <h1 class="title">Create a new password</h1>
             <p class="subtitle">Enter a new password for your account</p>
             <form action="/" class="form">
@@ -29,7 +130,6 @@
                 <!--In a form we can put a <button> or an submit-type <input>-->
                 <input type="submit" value="Confirm" class="primary-button login-button">
             </form> 
-
         </div>
     </div>
 </body>
