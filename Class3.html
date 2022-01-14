@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%; /*Our container must size all the screen*/
+            height: 100vh;
+            /*Now we'll center all our items and to do it easily
+            We'll use Grid and a property called place-items*/
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; 
+            /*We defined 3 rows, the second one is defined as 1fr of the space
+            and the other two is the remaining space*/
+            width: 300px;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none; /*This property is none, bc we're designing
+            the desktop layout and we'll display our logo in mobile with
+            the responsive design.*/
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form a {
+            color:var(--hospital-geen);
+            font-size: var(--sm);
+            text-decoration: none;
+            text-align: center;
+            margin-bottom: 52px;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .input {
+            /*To replicate our proposed design we need
+            to copy the color, the size and the form*/
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .input-email {
+            margin-bottom: 22px;
+        }
+        .primary-button {
+            background-color: var(--hospital-geen); /*Defines the button's color*/
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /*Change the cursor when we're above*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px; /*This avoid to show our button so small*/
+        }
+        .secondary-button {
+            background-color: var(--white); /*Defines the button's color*/
+            border: 1px solid var(--hospital-geen);
+            border-radius: 8px;
+            color: var(--hospital-geen);
+            width: 100%;
+            cursor: pointer; /*Change the cursor when we're above*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px; /*This avoid to show our button so small*/
+            
+        }
+
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+
+            .secondary-button {
+                width: inherit;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <!--This container will contain all the screen-->
+        <div class="form-container">
+            <!--This container will contain all the login form-->
+            <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+            
+            <form action="/" class="form">
+                <!--by the moment no action will be applied-->
+                <label for="email" class="label">Email adress</label>
+                <input type="text" id="email" placeholder="email@example.com" class="input input-email">
+
+                <label for="password" class="label">Re-enter password</label>
+                <input type="password" id="new-password" placeholder="*********" class="input input-password">
+
+                <input type="submit" value="Log in" class="primary-button login-button">
+
+                <a href="/">Forgot my password</a>
+            </form> 
+            <!--Remember, the secondary button is not part of the form
+            for that reason we place it here-->
+            <button class="secondary-button signup-button">Sign up</button>
+        </div>
+    </div>
+</body>
+</html>
