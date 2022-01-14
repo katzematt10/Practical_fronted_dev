@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%; /*Our container must size all the screen*/
+            height: 100vh;
+            /*Now we'll center all our items and to do it easily
+            We'll use Grid and a property called place-items*/
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; 
+            width: 300px;
+            justify-items: center;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none; /*This property is none, bc we're designing
+            the desktop layout and we'll display our logo in mobile with
+            the responsive design.*/
+        }
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .email-image {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color: var(--text-input-field);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .email-image img {
+            width: 80px;
+        }
+
+        .resend {
+            font-size: var(--sm);
+        }
+        .resend span {
+            color: var(--very-light-pink)
+        }
+        .resend a {
+            color: var(--hospital-geen);
+            text-decoration: none; /*In this case we delete the default line under the link*/
+        }
+        .primary-button {
+            background-color: var(--hospital-geen); /*Defines the button's color*/
+            border: none;
+            border-radius: 8px; 
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /*Change the cursor when we're above*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px; /*This avoid to show our button so small*/
+        }
+        .login-button {
+            margin-top: 14ppx;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login">
+        <!--This container will contain all the screen-->
+        <div class="form-container">
+            <!--This container will contain all the login form-->
+            <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">Email has been sent</h1>
+            <p class="subtitle">Please check your inbox for instructions
+                on how to reset the password
+            </p>
+           <div class="email-image">
+               <img src="./Platzi_YardSale_Icons/email.svg" alt="email" class="">
+           </div>
+
+           <button class="primary-button login-button">Login</button>
+           <p class="resend">
+               <span>Didn't receive tha mail?</span>
+               <a href="/">Resend</a> 
+           </p>
+              
+        </div>
+    </div>
+</body>
+</html>
