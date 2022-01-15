@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+            :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .cards-container {
+            /*This element will have the command CSS Grid*/
+            display: grid;
+            /*grid-template-columns: repeat(2,1fr);*/
+            /*The repeat function in this declaration has mainly two arguments:
+            The first one is the numer of columns we want, in this case 2 and the 
+            second one is the column size, in this case 1fr, but this is just
+            an example, the real command we'll use is the following:*/
+            grid-template-columns: repeat(auto-fill, 240px);
+            /*In this case, our number of columns is unknown so we need to 
+            adapt our design to that need so we define the argument "auto-fill" 
+            instead of a specific number and next we define the column size*/
+            gap: 26px; /*Add space between the Grid cells*/
+            place-content: center;
+        }
+        .product-card {
+            width: 240px;   
+        }
+        .product-card img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .product-info figure {
+            margin: 0;
+        }
+        .product-info figure img {
+            /*This means we'll stylize all the <img> into the <figure> 
+            into the container product-info*/
+            width: 35px;
+            height: 35px;
+        }
+        .product-info div p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0px;
+            margin-bottom: 4px;
+        }
+        .product-info div p:nth-child(2) {
+            font-size: var(--sm);
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: var(--very-light-pink);
+        }
+        @media (max-width: 640px) {
+            /*Here, we'll change the elements properties*/
+            .cards-container {
+                display: grid;
+                /*grid-template-columns: repeat(auto-fill, 240px);*/ /*Old one*/
+                grid-template-columns: repeat(auto-fill, 140px); /*Current*/
+                gap: 26px; 
+            }
+            .product-card {
+                width: 140px;   
+            }
+            .product-card img {
+                width: 140px;
+                height: 140px;
+               
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="main-container"> <!--Main container to organize the elements-->
+        <div class="cards-container"> <!--Space where the card are shown-->
+            
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            <div class="product-card"> <!--Space for each card-->
+                <img src="https://images.pexels.com/photos/6691860/pexels-photo-6691860.jpeg?cs=srgb&dl=pexels-rodnae-productions-6691860.jpg&fm=jpg" alt="" class="product-img"> <!--Product image-->
+                <div class="product-info"> <!--Section below the image-->
+                    <!--Section 1-->
+                    <div>
+                        <p>$120.00</p> <!--Price <p>-->
+                        <p>Product1</p> <!--Description <p>--> 
+                    </div>
+                    <!--Section 2-->
+                    <figure> <!--Action icon container-->
+                        <img src="./Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="">
+                    </figure>     
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+</body>
+</html>
