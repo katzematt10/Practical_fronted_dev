@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        .mobile-menu {
+            padding: 24px;
+        }
+        .mobile-menu a{
+            color: var(--black);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .mobile-menu ul {
+            padding: 0;
+            margin: 24px 0 0;
+            list-style: none;
+        }
+        .mobile-menu ul:nth-child(1) {
+           border-bottom: 1px solid var(--very-light-pink); 
+        }
+        .mobile-menu ul li {
+            margin-bottom: 24px;
+        }
+        .email {
+            font-size:  var(--sm);
+            font-weight: 300 !important;
+        }
+        .sign-out {
+            color: var(--hospital-geen) !important;
+            font-size: var(--sm);
+        }
+        /* .Last-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* margin: 40px 0px 0px; */
+        /* } */ 
+        .mobile-menu ul:nth-child(3) {
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-menu">
+        <ul>
+            <!--List for the categories-->
+            <li>
+                <a href="/">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="/">All</a>
+            </li>
+            <li>
+                <a href="/">Clothes</a>
+            </li>
+            <li>
+                <a href="/">Electronics</a>
+            </li>
+            <li>
+                <a href="/">Furnitures</a>
+            </li>
+            <li>
+                <a href="/">Toys</a>
+            </li>
+            <li>
+                <a href="/">Others</a>
+            </li>
+        </ul>
+        <!-- <div class="Last-container"> -->
+        <ul>
+            <!--List for the account options-->
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+        </ul>
+    
+        <ul>
+            <!--Mail and sign out-->
+            <li>
+                <a href="/" class="email">mathew.colmenares@hotmail.com</a>
+            </li>
+            <li>
+                <a href="/" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+        <!-- </div> -->
+        
+    </div>
+</body>
+</html>
