@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Here we'll put our font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            /*Here we're defining our CSS variables*/
+            /*In this case, colors*/
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-geen: #ACD9B2;
+            
+            /*we define size variables*/
+            --sm: 14px; /*Small*/
+            --md: 16px; /*Mid ot Medium*/
+            --lg: 18px; /*Large*/
+        }
+        /*We'll bring all our classes*/
+        body {
+            margin: 0; /*We're removing default margins*/
+            font-family: 'Quicksand', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 24px; /*0px top/bottom - 24px left/right*/
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu {
+            display: none;
+            /* In this case we hide the menu, bc in the 
+            desktop we don't need it*/
+        }
+        .logo {
+            width: 100px;
+
+        }
+        .navbar-left {
+            display: flex;
+            
+        }
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;   /*Remove the bullet points*/
+            padding: 0px;       /*Remove the default padding*/
+            margin: 0px; 
+            display: flex;
+            align-items: center;
+            height: 60px;
+
+        }
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            border: 1px solid var(--hospital-geen);
+            color: var(--hospital-geen);
+        }
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 12px;
+        }
+        .navbar-shopping-cart {
+            position: relative;
+
+        }
+        .navbar-shopping-cart div{  
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-geen);
+            border-radius: 50%; /*50% will make the border looks like a circle*/
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 640px) {
+            /*Here, we'll change the elements properties*/
+            .menu {
+                display: block;
+                /* In this case we show the menu, bc in the 
+                mobile we need it*/
+            }
+            .navbar-left ul {
+                /*We need to desapear the options in mobile*/
+                display: none;
+            }
+            .navbar-email {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./Platzi_YardSale_Icons/icon_menu.svg" alt="menu" class="menu">
+        <!-- This navbar is divided in sections to be worked with Flexbox -->
+        <div class="navbar-left">
+            <!-- We insert the Yard sale logo -->
+            <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <!-- We insert a list with the options we built before for mobile -->
+            <ul>
+                <li>
+                    <a href="/">All</a>
+                </li>
+                <li>
+                    <a href="/">Clothes</a>
+                </li>
+                <li>
+                    <a href="/">Electronics</a>
+                </li>
+                <li>
+                    <a href="/">Furnitures</a>
+                </li>
+                <li>
+                    <a href="/">Toys</a>
+                </li>
+                <li>
+                    <a href="/">Others</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">mathew.colmenares@hotmail.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="shopping-cart" 
+                    class="shopping-cart">
+                    <div>2</div> 
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
